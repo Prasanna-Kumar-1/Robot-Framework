@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200329 11:59:32.054" rpa="false">
+<suite id="s1" name="Robot WorkSpace" source="C:\Users\Yash\Robot WorkSpace">
+<suite id="s1-s1" name="VariablesDemo" source="C:\Users\Yash\Robot WorkSpace\VariablesDemo.robot">
+<test id="s1-s1-t1" name="Lists Lists Lists">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>a</arg>
+<arg>b</arg>
+<arg>c</arg>
+</arguments>
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20200329 11:59:32.132" level="INFO">${list} = ['a', 'b', 'c']</msg>
+<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.132"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>a</arg>
+<arg>b</arg>
+<arg>c</arg>
+</arguments>
+<assign>
+<var>@{also_list}</var>
+</assign>
+<msg timestamp="20200329 11:59:32.132" level="INFO">@{also_list} = [ a | b | c ]</msg>
+<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.132"></status>
+</kw>
+<kw name="One List">
+<arguments>
+<arg>${also_list}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{li}</arg>
+</arguments>
+<msg timestamp="20200329 11:59:32.132" level="INFO">a</msg>
+<msg timestamp="20200329 11:59:32.132" level="INFO">b</msg>
+<msg timestamp="20200329 11:59:32.132" level="INFO">c</msg>
+<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.132"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Printing as a List from "One List"</arg>
+</arguments>
+<msg timestamp="20200329 11:59:32.132" level="INFO">Printing as a List from "One List"</msg>
+<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.132"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${li}</arg>
+</arguments>
+<msg timestamp="20200329 11:59:32.132" level="INFO">['a', 'b', 'c']</msg>
+<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.132"></status>
+</kw>
+<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.132"></status>
+</kw>
+<kw name="Many Values">
+<arguments>
+<arg>@{list}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{li}</arg>
+</arguments>
+<msg timestamp="20200329 11:59:32.148" level="INFO">a</msg>
+<msg timestamp="20200329 11:59:32.148" level="INFO">b</msg>
+<msg timestamp="20200329 11:59:32.148" level="INFO">c</msg>
+<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.148"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Printing as a List from "Many Values"</arg>
+</arguments>
+<msg timestamp="20200329 11:59:32.148" level="INFO">Printing as a List from "Many Values"</msg>
+<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${li}</arg>
+</arguments>
+<msg timestamp="20200329 11:59:32.148" level="INFO">['a', 'b', 'c']</msg>
+<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+</kw>
+<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.148"></status>
+</kw>
+<kw name="Many Values">
+<arguments>
+<arg>d</arg>
+<arg>e</arg>
+<arg>@{also_list}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{li}</arg>
+</arguments>
+<msg timestamp="20200329 11:59:32.148" level="INFO">d</msg>
+<msg timestamp="20200329 11:59:32.148" level="INFO">e</msg>
+<msg timestamp="20200329 11:59:32.148" level="INFO">a</msg>
+<msg timestamp="20200329 11:59:32.148" level="INFO">b</msg>
+<msg timestamp="20200329 11:59:32.148" level="INFO">c</msg>
+<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Printing as a List from "Many Values"</arg>
+</arguments>
+<msg timestamp="20200329 11:59:32.148" level="INFO">Printing as a List from "Many Values"</msg>
+<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${li}</arg>
+</arguments>
+<msg timestamp="20200329 11:59:32.148" level="INFO">['d', 'e', 'a', 'b', 'c']</msg>
+<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+</kw>
+<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>a</arg>
+</arguments>
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20200329 11:59:32.148" level="INFO">${a} = ['a']</msg>
+<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>b</arg>
+<arg>c</arg>
+</arguments>
+<assign>
+<var>@{bc}</var>
+</assign>
+<msg timestamp="20200329 11:59:32.148" level="INFO">@{bc} = [ b | c ]</msg>
+<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+</kw>
+<kw name="Log ABC">
+<arguments>
+<arg>${a}</arg>
+<arg>@{bc}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${a}</arg>
+</arguments>
+<msg timestamp="20200329 11:59:32.148" level="INFO">['a']</msg>
+<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${bc}[0]</arg>
+</arguments>
+<msg timestamp="20200329 11:59:32.148" level="INFO">b</msg>
+<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${bc}[1]</arg>
+</arguments>
+<msg timestamp="20200329 11:59:32.148" level="INFO">c</msg>
+<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+</kw>
+<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+</kw>
+<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.148" critical="yes"></status>
+</test>
+<doc>Variable Demo
+Scalar variables start with $ prefix and should be considered a single value.
+The @ prefix is similar to the * (expansion or unpacking) operator in Python.</doc>
+<status status="PASS" starttime="20200329 11:59:32.117" endtime="20200329 11:59:32.148"></status>
+</suite>
+<status status="PASS" starttime="20200329 11:59:32.085" endtime="20200329 11:59:32.148"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Robot WorkSpace">Robot WorkSpace</stat>
+<stat pass="1" fail="0" id="s1-s1" name="VariablesDemo">Robot WorkSpace.VariablesDemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
