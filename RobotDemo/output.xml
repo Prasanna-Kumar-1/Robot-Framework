@@ -1,207 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200329 11:59:32.054" rpa="false">
-<suite id="s1" name="Robot WorkSpace" source="C:\Users\Yash\Robot WorkSpace">
-<suite id="s1-s1" name="VariablesDemo" source="C:\Users\Yash\Robot WorkSpace\VariablesDemo.robot">
-<test id="s1-s1-t1" name="Lists Lists Lists">
-<kw name="Create List" library="BuiltIn">
-<doc>Returns a list containing given items.</doc>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200329 12:20:38.638" rpa="false">
+<suite id="s1" name="RobotDemo" source="C:\Users\Yash\git\Robot-Framework\RobotDemo">
+<suite id="s1-s1" name="HandlingLists" source="C:\Users\Yash\git\Robot-Framework\RobotDemo\HandlingLists.robot">
+<test id="s1-s1-t1" name="Testing List of Numbers">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
-<arg>a</arg>
-<arg>b</arg>
-<arg>c</arg>
+<arg>random.sample(range(1, 20), 5)</arg>
+<arg>modules=random</arg>
 </arguments>
 <assign>
-<var>${list}</var>
+<var>${randlist}</var>
 </assign>
-<msg timestamp="20200329 11:59:32.132" level="INFO">${list} = ['a', 'b', 'c']</msg>
-<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.132"></status>
+<msg timestamp="20200329 12:20:38.700" level="INFO">${randlist} = [16, 9, 13, 15, 10]</msg>
+<status status="PASS" starttime="20200329 12:20:38.700" endtime="20200329 12:20:38.700"></status>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<doc>Returns the given values which can then be assigned to a variables.</doc>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
 <arguments>
-<arg>a</arg>
-<arg>b</arg>
-<arg>c</arg>
+<arg>${randlist}</arg>
 </arguments>
 <assign>
-<var>@{also_list}</var>
+<var>${itemcount}</var>
 </assign>
-<msg timestamp="20200329 11:59:32.132" level="INFO">@{also_list} = [ a | b | c ]</msg>
-<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.132"></status>
-</kw>
-<kw name="One List">
-<arguments>
-<arg>${also_list}</arg>
-</arguments>
-<kw name="Log Many" library="BuiltIn">
-<doc>Logs the given messages as separate entries using the INFO level.</doc>
-<arguments>
-<arg>@{li}</arg>
-</arguments>
-<msg timestamp="20200329 11:59:32.132" level="INFO">a</msg>
-<msg timestamp="20200329 11:59:32.132" level="INFO">b</msg>
-<msg timestamp="20200329 11:59:32.132" level="INFO">c</msg>
-<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.132"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>Printing as a List from "One List"</arg>
-</arguments>
-<msg timestamp="20200329 11:59:32.132" level="INFO">Printing as a List from "One List"</msg>
-<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.132"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${li}</arg>
-</arguments>
-<msg timestamp="20200329 11:59:32.132" level="INFO">['a', 'b', 'c']</msg>
-<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.132"></status>
-</kw>
-<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.132"></status>
-</kw>
-<kw name="Many Values">
-<arguments>
-<arg>@{list}</arg>
-</arguments>
-<kw name="Log Many" library="BuiltIn">
-<doc>Logs the given messages as separate entries using the INFO level.</doc>
-<arguments>
-<arg>@{li}</arg>
-</arguments>
-<msg timestamp="20200329 11:59:32.148" level="INFO">a</msg>
-<msg timestamp="20200329 11:59:32.148" level="INFO">b</msg>
-<msg timestamp="20200329 11:59:32.148" level="INFO">c</msg>
-<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.148"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>Printing as a List from "Many Values"</arg>
-</arguments>
-<msg timestamp="20200329 11:59:32.148" level="INFO">Printing as a List from "Many Values"</msg>
-<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${li}</arg>
-</arguments>
-<msg timestamp="20200329 11:59:32.148" level="INFO">['a', 'b', 'c']</msg>
-<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
-</kw>
-<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.148"></status>
-</kw>
-<kw name="Many Values">
-<arguments>
-<arg>d</arg>
-<arg>e</arg>
-<arg>@{also_list}</arg>
-</arguments>
-<kw name="Log Many" library="BuiltIn">
-<doc>Logs the given messages as separate entries using the INFO level.</doc>
-<arguments>
-<arg>@{li}</arg>
-</arguments>
-<msg timestamp="20200329 11:59:32.148" level="INFO">d</msg>
-<msg timestamp="20200329 11:59:32.148" level="INFO">e</msg>
-<msg timestamp="20200329 11:59:32.148" level="INFO">a</msg>
-<msg timestamp="20200329 11:59:32.148" level="INFO">b</msg>
-<msg timestamp="20200329 11:59:32.148" level="INFO">c</msg>
-<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>Printing as a List from "Many Values"</arg>
-</arguments>
-<msg timestamp="20200329 11:59:32.148" level="INFO">Printing as a List from "Many Values"</msg>
-<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${li}</arg>
-</arguments>
-<msg timestamp="20200329 11:59:32.148" level="INFO">['d', 'e', 'a', 'b', 'c']</msg>
-<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
-</kw>
-<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+<msg timestamp="20200329 12:20:38.700" level="INFO">Length is 5</msg>
+<msg timestamp="20200329 12:20:38.700" level="INFO">${itemcount} = 5</msg>
+<status status="PASS" starttime="20200329 12:20:38.700" endtime="20200329 12:20:38.700"></status>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
 <arguments>
-<arg>a</arg>
+<arg>@{randlist}</arg>
 </arguments>
 <assign>
-<var>${a}</var>
+<var>${numbers}</var>
 </assign>
-<msg timestamp="20200329 11:59:32.148" level="INFO">${a} = ['a']</msg>
-<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+<msg timestamp="20200329 12:20:38.700" level="INFO">${numbers} = [16, 9, 13, 15, 10]</msg>
+<status status="PASS" starttime="20200329 12:20:38.700" endtime="20200329 12:20:38.700"></status>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<doc>Returns the given values which can then be assigned to a variables.</doc>
+<kw name="Log List" library="Collections">
+<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
 <arguments>
-<arg>b</arg>
-<arg>c</arg>
+<arg>${numbers}</arg>
 </arguments>
-<assign>
-<var>@{bc}</var>
-</assign>
-<msg timestamp="20200329 11:59:32.148" level="INFO">@{bc} = [ b | c ]</msg>
-<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+<msg timestamp="20200329 12:20:38.700" level="INFO">List length is 5 and it contains following items:
+0: 16
+1: 9
+2: 13
+3: 15
+4: 10</msg>
+<status status="PASS" starttime="20200329 12:20:38.700" endtime="20200329 12:20:38.700"></status>
 </kw>
-<kw name="Log ABC">
+<kw name="Sort List" library="Collections">
+<doc>Sorts the given list in place.</doc>
 <arguments>
-<arg>${a}</arg>
-<arg>@{bc}</arg>
+<arg>${numbers}</arg>
 </arguments>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20200329 12:20:38.700" endtime="20200329 12:20:38.700"></status>
+</kw>
+<kw name="Log List" library="Collections">
+<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
 <arguments>
-<arg>${a}</arg>
+<arg>${numbers}</arg>
 </arguments>
-<msg timestamp="20200329 11:59:32.148" level="INFO">['a']</msg>
-<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
+<msg timestamp="20200329 12:20:38.700" level="INFO">List length is 5 and it contains following items:
+0: 9
+1: 10
+2: 13
+3: 15
+4: 16</msg>
+<status status="PASS" starttime="20200329 12:20:38.700" endtime="20200329 12:20:38.700"></status>
 </kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${bc}[0]</arg>
-</arguments>
-<msg timestamp="20200329 11:59:32.148" level="INFO">b</msg>
-<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${bc}[1]</arg>
-</arguments>
-<msg timestamp="20200329 11:59:32.148" level="INFO">c</msg>
-<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
-</kw>
-<status status="PASS" starttime="20200329 11:59:32.148" endtime="20200329 11:59:32.148"></status>
-</kw>
-<status status="PASS" starttime="20200329 11:59:32.132" endtime="20200329 11:59:32.148" critical="yes"></status>
+<status status="PASS" starttime="20200329 12:20:38.700" endtime="20200329 12:20:38.700" critical="yes"></status>
 </test>
-<doc>Variable Demo
-Scalar variables start with $ prefix and should be considered a single value.
-The @ prefix is similar to the * (expansion or unpacking) operator in Python.</doc>
-<status status="PASS" starttime="20200329 11:59:32.117" endtime="20200329 11:59:32.148"></status>
+<test id="s1-s1-t2" name="Testing List Of Letters">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>a</arg>
+<arg>b</arg>
+<arg>c</arg>
+</arguments>
+<assign>
+<var>${letters}</var>
+</assign>
+<msg timestamp="20200329 12:20:38.700" level="INFO">${letters} = ['a', 'b', 'c']</msg>
+<status status="PASS" starttime="20200329 12:20:38.700" endtime="20200329 12:20:38.700"></status>
+</kw>
+<kw name="Count Values In List" library="Collections">
+<doc>Returns the number of occurrences of the given ``value`` in ``list``.</doc>
+<arguments>
+<arg>${letters}</arg>
+<arg>c</arg>
+</arguments>
+<assign>
+<var>${matches}</var>
+</assign>
+<msg timestamp="20200329 12:20:38.716" level="INFO">${matches} = 1</msg>
+<status status="PASS" starttime="20200329 12:20:38.700" endtime="20200329 12:20:38.716"></status>
+</kw>
+<kw name="Log List" library="Collections">
+<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
+<arguments>
+<arg>${letters}</arg>
+</arguments>
+<msg timestamp="20200329 12:20:38.716" level="INFO">List length is 3 and it contains following items:
+0: a
+1: b
+2: c</msg>
+<status status="PASS" starttime="20200329 12:20:38.716" endtime="20200329 12:20:38.716"></status>
+</kw>
+<kw name="List Should Contain Value" library="Collections">
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<arguments>
+<arg>${letters}</arg>
+<arg>b</arg>
+</arguments>
+<status status="PASS" starttime="20200329 12:20:38.716" endtime="20200329 12:20:38.716"></status>
+</kw>
+<kw name="List Should Not Contain Value" library="Collections">
+<doc>Fails if the ``value`` is found from ``list``.</doc>
+<arguments>
+<arg>${letters}</arg>
+<arg>z</arg>
+</arguments>
+<status status="PASS" starttime="20200329 12:20:38.716" endtime="20200329 12:20:38.716"></status>
+</kw>
+<kw name="Remove Values From List" library="Collections">
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<arguments>
+<arg>${letters}</arg>
+<arg>a</arg>
+<arg>c</arg>
+</arguments>
+<status status="PASS" starttime="20200329 12:20:38.716" endtime="20200329 12:20:38.716"></status>
+</kw>
+<kw name="Log List" library="Collections">
+<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
+<arguments>
+<arg>${letters}</arg>
+</arguments>
+<msg timestamp="20200329 12:20:38.716" level="INFO">List has one item:
+b</msg>
+<status status="PASS" starttime="20200329 12:20:38.716" endtime="20200329 12:20:38.716"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${letters}</arg>
+<arg>z</arg>
+<arg>x</arg>
+<arg>j</arg>
+<arg>f</arg>
+</arguments>
+<status status="PASS" starttime="20200329 12:20:38.716" endtime="20200329 12:20:38.716"></status>
+</kw>
+<kw name="Sort List" library="Collections">
+<doc>Sorts the given list in place.</doc>
+<arguments>
+<arg>${letters}</arg>
+</arguments>
+<status status="PASS" starttime="20200329 12:20:38.716" endtime="20200329 12:20:38.716"></status>
+</kw>
+<kw name="Log List" library="Collections">
+<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
+<arguments>
+<arg>${letters}</arg>
+</arguments>
+<msg timestamp="20200329 12:20:38.716" level="INFO">List length is 5 and it contains following items:
+0: b
+1: f
+2: j
+3: x
+4: z</msg>
+<status status="PASS" starttime="20200329 12:20:38.716" endtime="20200329 12:20:38.716"></status>
+</kw>
+<status status="PASS" starttime="20200329 12:20:38.700" endtime="20200329 12:20:38.716" critical="yes"></status>
+</test>
+<doc>This Demo demonstrates using keywords from the Collections library.
+List variables are created using Create List keyword from the BuiltIn Library.
+This also demonstrates how to extend Robot Framework using Evaluate keyword to implement
+small snippets of embedded Python code.</doc>
+<status status="PASS" starttime="20200329 12:20:38.685" endtime="20200329 12:20:38.716"></status>
 </suite>
-<status status="PASS" starttime="20200329 11:59:32.085" endtime="20200329 11:59:32.148"></status>
+<status status="PASS" starttime="20200329 12:20:38.669" endtime="20200329 12:20:38.716"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Robot WorkSpace">Robot WorkSpace</stat>
-<stat pass="1" fail="0" id="s1-s1" name="VariablesDemo">Robot WorkSpace.VariablesDemo</stat>
+<stat pass="2" fail="0" id="s1" name="RobotDemo">RobotDemo</stat>
+<stat pass="2" fail="0" id="s1-s1" name="HandlingLists">RobotDemo.HandlingLists</stat>
 </suite>
 </statistics>
 <errors>
