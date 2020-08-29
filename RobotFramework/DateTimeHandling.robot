@@ -3,7 +3,7 @@ Documentation     PROBLEM:
 ...               You want to handle dates within a Robot Framework test case
 ...               without using lower level Python code or develop a custom library.
 ...               DISCUSSION:
-...               This recipe demonstrates:
+...               This Script demonstrates:
 ...               - using keywords from the DateTime library,
 ...               - changing the default result_format and using timedelta
 ...               instead of number or time string formats,
@@ -11,9 +11,6 @@ Documentation     PROBLEM:
 Library           DateTime
 
 *** Variables ***
-${recipe}         Recipe 031 Handling Dates
-${level}          Beginner
-${category}       Internal Library: DateTime
 ${unicode_release_date}    1991-10-01
 
 *** Test Cases ***
